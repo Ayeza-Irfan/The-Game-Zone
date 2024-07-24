@@ -1,0 +1,689 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #056f8f;
+  overflow-x: hidden;
+}
+.container {
+  width: 100%;
+  height: 70rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  padding: 0.5rem;
+  width: 25rem;
+  height: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  background-color: #056f8f;
+  clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+  gap: 0.5rem;
+  line-height: 2rem;
+}
+
+.logo i {
+  font-size: 4rem;
+}
+
+.fa-bars {
+  font-size: 2rem;
+  color: white;
+  margin: 1rem;
+  padding: 1rem;
+  display: none;
+}
+
+#toggler {
+  display: none;
+}
+
+.pages {
+  height: 5rem;
+  width: 85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pages a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.pages a.active {
+  color: #e7a335;
+}
+
+.pages a:hover:not(.active) {
+  color: #e7a335;
+}
+
+#btn {
+  font-weight: bold;
+  padding: 0.5rem;
+  text-align: right;
+  padding-right: 4rem;
+  background-color: #e7a335;
+  height: 5rem;
+  outline: none;
+  border: none;
+  width: 25rem;
+  font-size: 1.8rem;
+  clip-path: polygon(35% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+#btn i {
+  margin: 1rem;
+}
+
+.content {
+  width: 80%;
+  height: 50rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.content-desc {
+  margin-top: 10rem;
+  width: 40%;
+  height: 40rem;
+  color: white;
+}
+
+.content-desc h1 {
+  font-size: 5rem;
+}
+
+.content-desc p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.content-desc span {
+  color: #e7a335;
+}
+.rakuto {
+  width: 40%;
+  height: 37rem;
+  background: linear-gradient(rgba(38, 2, 39, 0.849), rgba(204, 115, 14, 0.8));
+  position: relative;
+}
+
+.rakuto::after {
+  content: "";
+  width: 100%;
+  height: 40rem;
+  background-image: url(./images/char.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: -15rem;
+}
+
+.rakuto:hover {
+  transform: translateX(3rem);
+}
+#btn-2 {
+  padding-left: 3rem;
+  width: 25rem;
+  height: 5rem;
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  text-align: left;
+  background-color: #e7a335;
+  border-radius: 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  clip-path: polygon(0 0, 74% 0, 100% 100%, 0 100%);
+}
+#btn-2:hover {
+  transform: scale(1.1);
+}
+
+.logo-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  gap: 1rem;
+}
+.logo-section i {
+  color: white;
+  font-size: 7rem;
+}
+.logo-section h1 {
+  width: 20rem;
+  color: white;
+  font-size: 3rem;
+}
+
+#games {
+  width: 100%;
+  height: 90rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.712)),
+    url("./images/fortnit.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.action-games {
+  width: 70%;
+  height: 40rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+#games h1 {
+  font-size: 2rem;
+  color: #e7a335;
+  font-weight: 300;
+}
+
+.action-games .cards {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.action-games .cards .img {
+  width: 10rem;
+  height: 15rem;
+  background-image: url("./images/jumanji.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 1.5rem;
+}
+
+.action-games .cards .img-2 {
+  background-image: url("./images/nba.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.action-games .cards .img-3 {
+  background-image: url("./images/battle.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.action-games .cards .img-4 {
+  background-image: url("./images/warxone.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.action-games .cards .img-5 {
+  background-image: url("./images/craft.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+.action-games .cards .img-6 {
+  background-image: url("./images/fortnit.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.action-games .cards .img-7 {
+  background-image: url("./images/fortnite.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.action-games .cards .img-8 {
+  background-image: url("./images/battlefield.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#games .img:hover {
+  transform: translateY(-1rem);
+}
+
+.categories {
+  width: 70%;
+  height: 40rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.categories .cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.categories .cards .img {
+  width: 13rem;
+  height: 12rem;
+  background-image: url("./images/carrace.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 1.5rem;
+}
+
+.categories .cards .img-2 {
+  background-image: url("./images/pes22.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.categories .cards .img-3 {
+  background-image: url("./images/warxone.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.categories .cards .img-4 {
+  background-image: url("./images/game2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.categories .cards .img-5 {
+  background-image: url("./images/game.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.categories .cards .img-6 {
+  background-image: url("./images/wras.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.categories .cards .img-7 {
+  background-image: url("./images/Anpar.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.categories .cards .img-8 {
+  background-image: url("./images/assassin.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.categories .cards .img-9 {
+  background-image: url("./images/asphalt8.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.categories .cards .img-10 {
+  background-image: url("./images/fifa21.webp");
+  background-position: center;
+  background-size: cover;
+}
+#matches {
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/flame.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.player-pair {
+  display: flex;
+  align-items: center;
+}
+
+#matches h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin: 2rem;
+}
+
+#matches .players {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+}
+
+.players .img {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  background-image: url("./images/vaklish.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.players .img-2 {
+  background-image: url("./images/char.png");
+  background-position: center;
+  background-size: cover;
+}
+.players .img-3 {
+  background-image: url("./images/rakuto.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.players .img:hover {
+  transform: translateY(-1rem);
+}
+
+.players i {
+  font-size: 2rem;
+  color: #e7a335;
+}
+
+.players span {
+  font-size: 2rem;
+}
+
+#matches p {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#reviews {
+  width: 100%;
+  height: 60rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/controller.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3rem;
+}
+
+#reviews h1 {
+  font-size: 3rem;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.boxes {
+  width: 24%;
+  height: 34rem;
+  border-radius: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.box .img-1 {
+  background-image: url("./images/gamer1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.box .img-2 {
+  background-image: url("./images/gamer2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.box .text {
+  background-color: black;
+  text-align: left;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+}
+
+.text p {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.text i {
+  color: #e7a335;
+  font-size: 3rem;
+}
+
+#links {
+  width: 100%;
+  height: 40rem;
+  background-color: #292626;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+}
+.logo-end {
+  padding: 0.5rem;
+  width: 25rem;
+  height: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #292626;
+  font-size: 2rem;
+  background-color: #e7a335;
+  clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+  gap: 0.5rem;
+  line-height: 2rem;
+  font-weight: 800;
+  align-self: center;
+}
+
+.logo-end i {
+  font-size: 4rem;
+}
+
+.one .quick-links {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 4rem;
+}
+.one .head {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.one i {
+  margin: 1rem;
+  color: #e7a335;
+}
+
+.quick-links:hover {
+  color: #e7a335;
+}
+
+footer {
+  background-color: black;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p {
+  color: white;
+  font-size: 1.5rem;
+}
+
+footer span {
+  font-size: 1.5rem;
+  color: #e7a335;
+}
+
+@media (max-width: 998px) {
+  html,
+  body {
+    overflow-x: hidden;
+    font-size: 55%;
+  }
+
+  .action-games .cards {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .categories .cards {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+  #matches {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 20px;
+    text-align: center;
+  }
+
+  #matches h1 {
+    grid-column: 1 / -1;
+  }
+
+  .player-pair {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    font-size: 45%;
+    overflow-x: hidden;
+  }
+  .fa-bars {
+    display: block;
+    font-size: 3.5rem;
+  }
+  .logo {
+    height: 8vh;
+    font-size: 2.5rem;
+  }
+  .pages {
+    position: fixed;
+    width: 35%;
+    height: 50rem;
+    background: #2c3e50;
+    top: 6rem;
+    right: -100%;
+    text-align: center;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+    z-index: 2;
+  }
+  .pages a {
+    font-size: 2.5rem;
+    margin: 1rem;
+  }
+
+  #toggler:checked ~ .pages {
+    right: 0;
+  }
+
+  .container {
+    height: 120rem;
+  }
+
+  .content{
+    flex-direction: column;
+
+  }
+  .rakuto{
+    align-self: flex-end;
+    width: 70%;
+    margin-top:50rem;
+  }
+
+  .content-desc {
+    width: 100%;
+    text-align: center;
+   
+
+  }
+ 
+ 
+  .action-games .cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .categories .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  #reviews {
+    height: 100rem;
+  }
+  .box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .boxes {
+    width: 85%;
+  }
+  #links {
+    height: 60rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding:2rem;
+    align-items: center;
+    justify-items: center;
+  }
+ 
+
+  #games {
+    height: 100rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html, body {
+    font-size: 35%;
+    overflow-x: hidden;
+  }
+  footer{
+    font-size: 2rem;
+  }
+ 
+ 
+}
